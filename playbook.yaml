@@ -1,0 +1,5 @@
+- name: bootstrap
+  hosts: localhost
+
+  roles:
+    - role: minikube
