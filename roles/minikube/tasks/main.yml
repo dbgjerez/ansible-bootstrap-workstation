@@ -5,8 +5,3 @@
     dest: /usr/local/bin/minikube
     mode: "0755"
   become: yes
-- name: "minikube version"
-  ansible.builtin.command: minikube version | grep version
-  register: minikube_version
-- debug: 
-    var: minikube_version.stdout_lines 
