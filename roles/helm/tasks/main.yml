@@ -1,0 +1,17 @@
+---
+- name: "download helm"
+  get_url: 
+    url: https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz
+    dest: /tmp/helm.tar.gz
+    mode: "0755"
+- name: "unatar helm"
+  become: yes
+  unarchive:
+    src: /tmp/helm.tar.gz
+    dest: /usr/local/bin/
+    mode: "0755"
+    creates: '/usr/local/bin/helm'
+    extra_opts:
+      - '--strip-components=1'
+      - --wildcards
+      - '*/helm'
