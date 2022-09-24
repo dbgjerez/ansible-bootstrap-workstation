@@ -3,3 +3,4 @@
 
   roles:
     - role: minikube
+    - role: kubectl
