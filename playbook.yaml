@@ -4,3 +4,4 @@
   roles:
     - role: minikube
     - role: kubectl
+    - role: helm
