@@ -5,3 +5,4 @@
     - role: minikube
     - role: kubectl
     - role: helm
+    - role: oc

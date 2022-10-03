@@ -1,0 +1,13 @@
+---
+- name: "download oc cli"
+  get_url: 
+    url: "https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/linux/oc.tar.gz"
+    dest: /tmp/oc.tar.gz
+    mode: "0755"
+- name: "unatar oc cli"
+  become: yes
+  unarchive:
+    src: /tmp/oc.tar.gz
+    dest: /usr/local/bin/
+    mode: "0755"
+    include: "oc"
