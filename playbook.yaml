@@ -6,3 +6,4 @@
     - role: kubectl
     - role: helm
     - role: oc
+    - role: argocd
